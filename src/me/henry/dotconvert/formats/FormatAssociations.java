@@ -1,7 +1,7 @@
 package me.henry.dotconvert.formats;
 
-import me.henry.dotconvert.registry.RegistryMethods;
 import me.henry.dotconvert.registry.RegistryHandler;
+import me.henry.dotconvert.registry.RegistryMethods;
 
 import java.util.ArrayList;
 import java.util.Arrays;

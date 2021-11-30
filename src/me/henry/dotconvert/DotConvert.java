@@ -1,6 +1,7 @@
 package me.henry.dotconvert;
 
 import me.henry.dotconvert.install.Installer;
+import me.henry.dotconvert.menu.MenuMethods;
 import me.henry.dotconvert.registry.RegistryHandler;
 import me.henry.dotconvert.registry.RegistryTypes;
 
@@ -16,7 +17,11 @@ public class DotConvert {
             Installer.install(installLocation.toString());
         }
 
+        System.out.println("%root%: " + installLocation);
+
         RegistryHandler.addKey("HKCR\\jpegfile\\shell\\dotconvert\\shell");
         RegistryHandler.addEntry("HKCR\\jpegfile\\shell\\dotconvert", "MUIVerb", "Convert to...", RegistryTypes.REG_SZ);
+
+        MenuMethods.refreshExtension("mp3");
     }
 }

@@ -28,6 +28,13 @@ public class Installer {
             addInstallLog("Unable to create \"%root%\\registry\" folder, aborting!");
         }
 
+        File formatDir = new File(rootDir + "\\formats");
+        if(formatDir.mkdir()) {
+            addInstallLog("Created the \"%root%\\formats\" folder.");
+        } else {
+            addInstallLog("Unable to create \"%root%\\formats\" folder, aborting!");
+        }
+
 
         /*
         ---> End folders
@@ -38,6 +45,12 @@ public class Installer {
          */
         File registryModsLoc = new File(rootDir + "\\registry\\extensions.json");
         createFile(registryModsLoc, "{}");
+
+        File formatStoreLoc = new File(rootDir + "\\formats\\formats.json");
+        createFile(formatStoreLoc, "{}");
+
+        File fileMapLoc = new File(rootDir + "\\formats\\file_map.json");
+        createFile(fileMapLoc, "{}");
 
         /*
         ---> End files
