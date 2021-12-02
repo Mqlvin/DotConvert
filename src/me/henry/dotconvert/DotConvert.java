@@ -22,7 +22,7 @@ public class DotConvert {
             Installer.install(installLocation.toString());
         } else if(args[0].equalsIgnoreCase("update")) {
             FormatHandler.loadFormats();
-            RegistryTweaker.tweakFormat(FormatHandler.getObjectFromExtension("wav"));
+            RegistryTweaker.tweakAllFormats();
         } else if(args.length == 2 && args[0].equalsIgnoreCase("convert")) {
             System.out.println("Converting: " + args[1]);
             new Thread(() -> {
@@ -43,5 +43,8 @@ public class DotConvert {
 
 
         // ---
+
+        // TODO: Fix .flac it's not working D:
+        // Assoc.GrooveMusic
     }
 }

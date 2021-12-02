@@ -1,1 +1,5 @@
-{}
+{
+"mp3":"audio",
+"wav":"audio",
+"flac":"audio"
+}
