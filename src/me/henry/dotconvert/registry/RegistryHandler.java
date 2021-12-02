@@ -37,12 +37,26 @@ public class RegistryHandler {
          */
     }
 
-    public static void addEntry(String location, String name, String data, Enum<RegistryTypes> type) {
-        CommandExecutor executor = new CommandExecutor("reg add \"" + location + "\" /v \"" + name + "\" /t \"" + type.toString() + "\" /d \"" + data + "\" /f");
-        executor.executeCommand();
+    public static void addEntry(String location, String name, String data, Enum<RegistryTypes> type, Boolean forced) {
+        if(forced) {
+            CommandExecutor executor = new CommandExecutor("reg add \"" + location + "\" /v \"" + name + "\" /t \"" + type.toString() + "\" /d \"" + data + "\" /f");
+            executor.executeCommand();
+        } else {
+            CommandExecutor executor = new CommandExecutor("reg add \"" + location + "\" /v \"" + name + "\" /t \"" + type.toString() + "\" /d \"" + data + "\"");
+            executor.executeCommand();
+        }
         /*
         For example:
         reg add "HKCR\jpegfile\shell\dotconvert" /v "MUIVerb" /t "REG_SZ" /d "Convert to..." /f
+         */
+    }
+
+    public static void removeEntry(String location, String name) {
+        CommandExecutor executor = new CommandExecutor("reg delete \"" + location + "\" /v \"" + name + "\" /f");
+        executor.executeCommand();
+        /*
+        For example:
+        reg remove "HKCR\jpegfile\shell\dotconvert" /v "MUIVerb" /f
          */
     }
 }

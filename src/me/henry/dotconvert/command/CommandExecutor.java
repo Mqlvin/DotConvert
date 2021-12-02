@@ -17,6 +17,7 @@ public class CommandExecutor implements CommandImpl {
 
     @Override
     public void executeCommand() {
+        System.out.println("Executing command: " + this.command);
         CommandAPI.executeCommand(this);
         if(doOutput) {
             while(complete == false) {

@@ -46,10 +46,7 @@ public class Installer {
         File registryModsLoc = new File(rootDir + "\\registry\\extensions.json");
         createFile(registryModsLoc, "{}");
 
-        File formatStoreLoc = new File(rootDir + "\\formats\\formats.json");
-        createFile(formatStoreLoc, "{}");
-
-        File fileMapLoc = new File(rootDir + "\\formats\\file_map.json");
+        File fileMapLoc = new File(rootDir + "\\formats\\format_config.json");
         createFile(fileMapLoc, "{}");
 
         /*

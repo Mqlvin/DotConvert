@@ -1,19 +1,7 @@
 package me.henry.dotconvert.menu;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import me.henry.dotconvert.DotConvert;
-import me.henry.dotconvert.formats.FormatAssociations;
-import me.henry.dotconvert.io.Readers;
-import me.henry.dotconvert.io.Writers;
-import me.henry.dotconvert.registry.RegistryHandler;
-import me.henry.dotconvert.registry.RegistryTypes;
-
-import java.io.File;
-import java.net.URLEncoder;
-import java.util.WeakHashMap;
-
 public class MenuMethods {
+    /*
     public static void refreshExtension(String fileExtension) {
         JsonObject profile = createExtensionProfile(fileExtension);
 
@@ -42,9 +30,10 @@ public class MenuMethods {
     private static void createRegistryItems(JsonObject profile, String fileExtension) {
         String registryKey = "HKCR\\" + profile.get(fileExtension).getAsJsonObject().get("progID").toString().replace("\"", "") + "\\shell\\DotConvert";
         RegistryHandler.addKey( registryKey + "\\shell");
-        RegistryHandler.addEntry(registryKey, "MUIVerb", "Convert to...", RegistryTypes.REG_SZ);
-        RegistryHandler.addEntry(registryKey, "SubCommands", "", RegistryTypes.REG_SZ);
+        RegistryHandler.addEntry(registryKey, "MUIVerb", "Convert to...", RegistryTypes.REG_SZ, false);
+        RegistryHandler.addEntry(registryKey, "SubCommands", "", RegistryTypes.REG_SZ, false);
 
         
     }
+     */
 }
