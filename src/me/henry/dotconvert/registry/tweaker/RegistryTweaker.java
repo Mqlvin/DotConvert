@@ -23,9 +23,14 @@ public class RegistryTweaker {
             if(formatType.getConversionsList().contains(format.getExtension())) {
                 RegistryHandler.addKey(workingDir + "\\shell\\" + format.getExtension().toLowerCase() + "...\\command");
                 RegistryHandler.addEntry(workingDir + "\\shell\\" + format.getExtension().toLowerCase() + "...", "Icon", format.getIcoPath().replace("\"", "\\\"").substring(1), RegistryTypes.REG_SZ, true);
-                RegistryHandler.removeEntry(workingDir + "\\shell\\" + format.getExtension().toLowerCase() + "...\\command", "(Default)");
-                RegistryHandler.addEntry(workingDir + "\\shell\\" + format.getExtension().toLowerCase() + "...\\command", "(Default)", ("cmd /c \"java -jar " + DotConvert.installLocation + "\\DotConvert.jar convert \"\"\"%0\"\"").replace("\"", "\\\""), RegistryTypes.REG_SZ, true);
+                RegistryHandler.setDefault(workingDir + "\\shell\\" + format.getExtension().toLowerCase() + "...\\command", ("cmd /c /q \"java -jar " + DotConvert.installLocation + "\\DotConvert.jar convert \"\"\"%0\"\"").replace("\"", "\\\""));
             }
+        }
+    }
+
+    public static void tweakAllFormats() {
+        for(FormatObject format : FormatHandler.formats) {
+            tweakFormat(format);
         }
     }
 }

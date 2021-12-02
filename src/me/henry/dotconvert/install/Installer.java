@@ -43,7 +43,7 @@ public class Installer {
         /*
         ---> Start files
          */
-        File registryModsLoc = new File(rootDir + "\\registry\\extensions.json");
+        File registryModsLoc = new File(rootDir + "\\registry\\tweaks.log");
         createFile(registryModsLoc, "{}");
 
         File fileMapLoc = new File(rootDir + "\\formats\\format_config.json");

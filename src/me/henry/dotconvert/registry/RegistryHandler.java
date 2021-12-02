@@ -51,6 +51,15 @@ public class RegistryHandler {
          */
     }
 
+    public static void setDefault(String location, String data) {
+        CommandExecutor executor = new CommandExecutor("reg add \"" + location + "\" /ve /d \"" + data + "\" /f");
+        executor.executeCommand();
+        /*
+        For example:
+        reg add "HKCR\jpegfile\shell\dotconvert" /v "MUIVerb" /t "REG_SZ" /d "Convert to..." /f
+         */
+    }
+
     public static void removeEntry(String location, String name) {
         CommandExecutor executor = new CommandExecutor("reg delete \"" + location + "\" /v \"" + name + "\" /f");
         executor.executeCommand();

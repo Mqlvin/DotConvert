@@ -2,8 +2,6 @@ package me.henry.dotconvert.format.type;
 
 import me.henry.dotconvert.format.FormatAssociations;
 
-import java.io.File;
-import java.text.Normalizer;
 import java.util.ArrayList;
 
 public class FormatObject implements FormatImpl {

@@ -4,7 +4,6 @@ import me.henry.dotconvert.registry.RegistryHandler;
 import me.henry.dotconvert.registry.RegistryMethods;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class FormatAssociations {
     public static String getProgID(String fileExtension) {

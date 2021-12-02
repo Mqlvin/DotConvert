@@ -7,8 +7,6 @@ import me.henry.dotconvert.format.type.FormatObject;
 import me.henry.dotconvert.format.type.FormatObjectType;
 import me.henry.dotconvert.io.Readers;
 import me.henry.dotconvert.json.KeyHandler;
-import me.henry.dotconvert.registry.RegistryHandler;
-import me.henry.dotconvert.registry.string.RegistryString;
 
 import java.io.File;
 import java.util.ArrayList;
